@@ -1,0 +1,199 @@
+/*----------------------- GOOGLE FONTS -----------------------*/ 
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+/*----------------------- Variables -----------------------*/ 
+:root {
+    --header-height: 3rem;
+
+    /*----------------------- COLORS -----------------------*/
+    --hue-color: 250;
+    --first-color: hsl(var(--hue-color), 69%, 61%);
+    --first-second-color: hsl(var(--hue-color), 69%, 61%);
+    --first-color-alt: hsl(var(--hue-color), 57%, 53%);
+    --first-color-laghter: hsl(var(--hue-color), 92%, 85%);
+    --title-color: hsl(var(--hue-color), 8%, 15%);
+    --text-color: hsl(var(--hue-color), 8%, 45%);
+    --text-color-light: hsl(var(--hue-color), 8%, 65%);
+    --input-color: hsl(var(--hue-color), 70%, 96%);
+    --body-color: hsl(var(--hue-color), 60%, 99%);
+    --container-color: white;
+
+    /*----------------------- Font and Typography -----------------------*/
+    --body-font: 'Poppins', sans-serif;
+    --big-font-size: 2rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1.125rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+
+    /*----------------------- Font weight -----------------------*/ 
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    /*----------------------- Margenes Bottom -----------------------*/
+    --mb-0-25: .25rem;
+    --mb-0-50: .50rem;
+    --mb-0-75: .75rem;
+    --mb-1: 1rem;
+    --mb-1-5: 1.5rem;
+    --mb-2: 2rem;
+    --mb-2-5: 2.5rem;
+    --mb-3: 3rem;
+
+    /*----------------------- Z index -----------------------*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    --z-modal: 1000;
+}
+
+/*----------------------- BASE -----------------------*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+    color: var(--text-color);
+}
+
+h1,h2,h3,h4 {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+.grid {
+    display: grid;
+    gap: 1.5rem;
+}
+
+a {
+    color: var(--first-color);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: var(--first-color-alt);
+    opacity: 0.7;
+}
+
+.logo {
+    font-size: 27px;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 8vh;
+}
+
+/*main {
+    background: url("../../imgs/bg2.jpg") no-repeat center center;
+    background-size: cover;
+    height: 92vh;
+}*/
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    letter-spacing: 3px;
+    margin-left: 32px;
+}
+
+.mobile-menu {
+    display: none;
+    cursor: pointer;
+}
+
+.mobile-menu div {
+    width: 32px;
+    height: 2px;
+    background: var(--first-color);
+    margin: 8px;
+    transition: 0.3s;
+}
+
+.home__blob {
+    width: 200px;
+    fill: var(--first-color);
+}
+
+.home__blob-img {
+    width: 170px;
+}
+
+/*----------------------- MOBILE NAVBAR -----------------------*/
+@media (max-width: 999px) {
+    body {
+        overflow-x: hidden; /* Se algo transbordar, fica escondido */
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0px;
+        width: 50vw;
+        height: 92vh;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%); /* Faz transbordar */
+        transition: transform 0.3s ease-in;
+        /*---*/
+        background-color: var(--body-color);
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+        border-radius: 1.5rem 0 0 1.5rem;
+        transition: .3s;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .nav-list.active {
+        transform: translateX(0)
+    }
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        } to {
+            opacity: 1;
+        }
+    }
+}
+
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
+}
