@@ -9,7 +9,7 @@
     <!--=========== UNICONS ============-->
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
 
-    <title>Luiz Bonini</title>
+    <title>Luiz Bonini - Front-End Developer</title>
 </head>
 
 
@@ -17,7 +17,7 @@
     <!--=============== HEADER ================-->
     <header>
         <nav>
-            <a href="#" class="logo">Luiz Bonini</a>
+            <a href="#" class="logo">LB</a>
 
             <!--Menu Hamburguer-->
             <div class="mobile-menu">
@@ -51,17 +51,47 @@
     <main class="main">
 
         <!--=== HOME ===-->
-        <section class="homes section" id="home">
-            <!--adicionar divs aqui-->
-            <svg class="home__blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
-                <mask id="mask0" mask-type="alpha">
-                    <path fill="#6E57E0" d="M56.8,-63.1C72.9,-54.2,84.6,-35.6,86.4,-16.5C88.3,2.6,80.3,22.1,67.9,35.1C55.5,48,38.8,54.4,23.5,56.5C8.2,58.5,-5.8,56.4,-23.2,54.2C-40.7,52,-61.7,49.9,-66.8,39.4C-71.8,28.9,-60.9,10,-53.2,-5.2C-45.5,-20.3,-41,-31.9,-32.6,-42.1C-24.3,-52.3,-12.1,-61.2,4.1,-66.1C20.4,-71,40.8,-72,56.8,-63.1Z" transform="translate(100 100)" />
-                </mask>
-                <g mask="url(#mask0)">
-                    <path fill="#6E57E0" d="M56.8,-63.1C72.9,-54.2,84.6,-35.6,86.4,-16.5C88.3,2.6,80.3,22.1,67.9,35.1C55.5,48,38.8,54.4,23.5,56.5C8.2,58.5,-5.8,56.4,-23.2,54.2C-40.7,52,-61.7,49.9,-66.8,39.4C-71.8,28.9,-60.9,10,-53.2,-5.2C-45.5,-20.3,-41,-31.9,-32.6,-42.1C-24.3,-52.3,-12.1,-61.2,4.1,-66.1C20.4,-71,40.8,-72,56.8,-63.1Z" transform="translate(100 100)" />
-                    <image class="home__blob-img" x="20" y="20" xlink:href="../../imgs/perfil3.png"/>
-                </g>
-              </svg>
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                    <div class="home__img">
+                        <svg class="home__blob" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                            <mask id="mask0" mask-type="alpha">
+                                <path fill="#6E57E0" d="M56.8,-63.1C72.9,-54.2,84.6,-35.6,86.4,-16.5C88.3,2.6,80.3,22.1,67.9,35.1C55.5,48,38.8,54.4,23.5,56.5C8.2,58.5,-5.8,56.4,-23.2,54.2C-40.7,52,-61.7,49.9,-66.8,39.4C-71.8,28.9,-60.9,10,-53.2,-5.2C-45.5,-20.3,-41,-31.9,-32.6,-42.1C-24.3,-52.3,-12.1,-61.2,4.1,-66.1C20.4,-71,40.8,-72,56.8,-63.1Z" transform="translate(100 100)" />
+                            </mask>
+                            <g mask="url(#mask0)">
+                                <path fill="#6E57E0" d="M56.8,-63.1C72.9,-54.2,84.6,-35.6,86.4,-16.5C88.3,2.6,80.3,22.1,67.9,35.1C55.5,48,38.8,54.4,23.5,56.5C8.2,58.5,-5.8,56.4,-23.2,54.2C-40.7,52,-61.7,49.9,-66.8,39.4C-71.8,28.9,-60.9,10,-53.2,-5.2C-45.5,-20.3,-41,-31.9,-32.6,-42.1C-24.3,-52.3,-12.1,-61.2,4.1,-66.1C20.4,-71,40.8,-72,56.8,-63.1Z" transform="translate(100 100)" />
+                                <image class="home__blob-img" x="20" y="20" xlink:href="../imgs/perfil3.png"/>
+                            </g>
+                          </svg>
+                    </div>
+
+                    
+                    <div class="home__data">
+                        <h3 class="home__title">Oi, eu sou o</h3>
+                        <h1 class="home__myname"><span>Luiz</span> Bonini</h1>
+                        <p class="home__description">Sou um <span>Front-End Web Developer</span>, estudante de análise e desenvolvimento de sistemas, apaixonado por código, estou focado atualmete em aprender mais em <span>JavaScript</span> e <span>React</span>.</p>
+                        <a href="#contact" class="button button--flex">
+                            Meu contato <i class="uil uil-message button__icon"></i>
+                        </a>
+
+                        <div class="home__content grid">
+                            <div class="home__social">
+                                <a href="https://www.linkedin.com/in/dev-luiz-carlos/" target="_blank" class="home__social-icon">
+                                    <i class="uil uil-linkedin-alt"></i>
+                                </a>
+                                <a href="https://github.com/LuizCBonini" target="_blank" class="home__social-icon">
+                                    <i class="uil uil-github-alt"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>                                       
+            </div>
+        </section>
+        <section>
+            <div class="sectionHead">
+                <span>Um pouco sobre a minha pessoa</span>
+                <h2>Sobre </h2>
+            </div>
         </section>
         
     </main>
