@@ -155,64 +155,7 @@ header {
     background-color: var(--body-color);
 }
 
-/*----------------------- MOBILE NAVBAR -----------------------*/
-@media (max-width: 999px) {
-    body {
-        overflow-x: hidden; /* Se algo transbordar, fica escondido */
-    }
 
-    .nav-list {
-        position: absolute;
-        top: 8vh;
-        right: 0px;
-        width: 50vw;
-        height: 92vh;
-        background: white;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-around;
-        transform: translateX(100%); /* Faz transbordar */
-        transition: transform 0.3s ease-in;
-        /*---*/
-        background-color: var(--body-color);
-        box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
-        border-radius: 1.5rem 0 0 1.5rem;
-    }
-
-    .nav-list li {
-        margin-left: 0;
-        opacity: 0;
-    }
-
-    .mobile-menu {
-        display: block;
-    }
-
-    .nav-list.active {
-        transform: translateX(0)
-    }
-
-    @keyframes navLinkFade {
-        from {
-            opacity: 0;
-            transform: translateX(50px);
-        } to {
-            opacity: 1;
-        }
-    }
-}
-
-.mobile-menu.active .line1 {
-    transform: rotate(-45deg) translate(-8px, 8px);
-}
-
-.mobile-menu.active .line2 {
-    opacity: 0;
-}
-
-.mobile-menu.active .line3 {
-    transform: rotate(45deg) translate(-5px, -7px);
-}
 
 /*----------------------- LAYOUT -----------------------*/ 
 .container {
@@ -314,8 +257,244 @@ header {
     margin: auto;
 }
 
-.about__data p {
-    margin-top: 5px;
+/* ------------------------------- PROJECTS SECTION ------------------ */
+.section_projects-title span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 124px;
+    width: 50px;
+    height: 1px;
+    background: #333;
+}
+
+.section_projects-title span {
+    padding-bottom: 20px;
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 80px;
+    letter-spacing: 1px;
+    padding-top: 120px;
+}
+
+/* ---------- CARDS ----------- */
+.container-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 1100px;
+    padding: 30px;
+}
+
+.container-card .card {
+    position: relative;
+    max-width: 300px;
+    height: 215px;
+    background: var(--first-color);
+    margin: 30px 10px;
+    padding: 20px 15px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    transition: .3s ease-in-out;
+
+}
+
+.container-card .card:hover {
+    height: 420px;
+}
+
+.container-card .card .imgbox {
+    position: relative;
+    width: 260px;
+    height: 260px;
+    top: -60px;
+    left: 20px;
+    z-index: 1;
+    /*box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);*/
+}
+
+.container-card .card .imgbox img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.container-card .card .content {
+    position: relative;
+    margin-top: -140px;
+    padding: 10px 15px;
+    text-align: center;
+    color:white;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+}
+
+.container-card .card .content .card-title {
+    color: var(--first-color-laghter);
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.336);
+}
+
+.container-card .card:hover .content {
+    visibility: visible;
+    opacity: 1;
+    margin-top: -40px;
+    transition-delay: 0.3s;
+}
+/*----------------------- MOBILE -----------------------*/
+@media (max-width: 999px) {
+    /* ========== Nav Bar ============= */
+    body {
+        overflow-x: hidden; /* Se algo transbordar, fica escondido */
+        margin: 0 0.5rem;
+    
+    }
+
+    .nav-list {
+        position: absolute;
+        top: 8vh;
+        right: 0px;
+        width: 50vw;
+        height: 92vh;
+        background: white;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        transform: translateX(100%); /* Faz transbordar */
+        transition: transform 0.3s ease-in;
+        /*---*/
+        background-color: var(--body-color);
+        box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
+        border-radius: 1.5rem 0 0 1.5rem;
+    }
+
+    .nav-list li {
+        margin-left: 0;
+        opacity: 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .nav-list.active {
+        transform: translateX(0)
+    }
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        } to {
+            opacity: 1;
+        }
+    }
+
+    /* ===== Home ===== */
+    .about__data {
+        box-shadow: none;
+        font-size: var(--small-font-size);
+        font-weight: var(--font-semi-bold);
+        padding: 0;
+        margin: 0;
+    }
+
+    .home__blob {
+        width: 230px;
+        margin: -40px;
+    }
+
+    .home__description {
+        font-size: var(--small-font-size);
+    }
+
+    /* ======== PROJECTS ======== */
+    .container-card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 240px;
+        padding: 0px;
+        margin-top: 20px;
+    }
+    
+    .container-card .card {
+        position: relative;
+        max-width: 300px;
+        width: 200px;
+        height: 160px;
+        background: var(--first-color);
+        margin: 30px 10px;
+        padding: 20px 15px;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 5px 30px rgba(0, 0, 0, 0.5);
+        border-radius: 8px;
+        transition: .3s ease-in-out;
+    
+    }
+    
+    .container-card .card:hover {
+        height: 280px;
+    }
+    
+    .container-card .card .imgbox {
+        position: relative;
+        width: 200px;
+        height: 158px;
+        top: -60px;
+        left: 0px;
+        z-index: 1;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    }
+    
+    .container-card .card .imgbox img {
+        max-width: 100%;
+        width: 200px;
+        border-radius: 4px;
+    }
+    
+    .container-card .card .content {
+        position: relative;
+        margin-top: -140px;
+        padding: 10px 15px;
+        text-align: center;
+        color:white;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s ease-in-out;
+        font-size: var(--small-font-size);
+    }
+    
+    .container-card .card .content .card-title {
+        color: var(--first-color-laghter);
+        text-shadow: 0 0 5px rgba(0, 0, 0, 0.336);
+    }
+    
+    .container-card .card:hover .content {
+        visibility: visible;
+        opacity: 1;
+        margin-top: -40px;
+        transition-delay: 0.3s;
+    }
+}
+
+/* ========== Animation Lines to X ============= */
+.mobile-menu.active .line1 {
+    transform: rotate(-45deg) translate(-8px, 8px);
+}
+
+.mobile-menu.active .line2 {
+    opacity: 0;
+}
+
+.mobile-menu.active .line3 {
+    transform: rotate(45deg) translate(-5px, -7px);
 }
 
 /* ADICIONAR RESPONSIVIDADE AO ABOUT */
