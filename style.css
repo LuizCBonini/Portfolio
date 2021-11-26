@@ -372,13 +372,42 @@ header {
     padding-top: 120px;
 }
 
-.skillsGrid {
+.skill__container {
+    text-align: center;
+    max-width: 40rem;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.11);
+    padding: 50px;
+    border-radius: 10px;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
+    margin: auto;
+}
+
+.skill__grid {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: (minmax(80px, 1fr))[auto-fill];
     grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     grid-column-gap: 50px;
     grid-row-gap: 50px;
+    list-style: none;
+}
+
+.skill__grid li {
+    background-color: white;
+    padding: 10px;
+    border-radius: 15px;
+    width: 80px;
+    -webkit-transition: all 0.3s ease-in;
+    transition: all 0.3s ease-in;
+    -webkit-box-shadow: 0px 4px 8px rgb(134 151 168 / 10%);
+    box-shadow: 0px 4px 8px rgb(134 151 168 / 10%);
+    border: 1px solid #eee;
+}
+
+.skill-icon {
+    font-size: 1.75rem;
+    color: var(--first-color);
 }
 
 /* ------------------------------- CONTACT SECTION ------------------ */
@@ -454,12 +483,12 @@ footer {
         flex-direction: column;
         align-items: center;
         justify-content: space-around;
-        transform: translateX(100%); /* Faz transbordar */
         transition: transform 0.3s ease-in;
         /*---*/
         background-color: var(--body-color);
         box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
         border-radius: 1.5rem 0 0 1.5rem;
+        transform: translateX(100%); /* Faz transbordar */
     }
 
     .nav-list li {
@@ -488,7 +517,7 @@ footer {
 
     .home__blob {
         width: 230px;
-        margin: -40px;
+        
     }
 
     .home__description {
