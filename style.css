@@ -110,6 +110,8 @@ nav {
 }
 
 .mobile-menu {
+    position: fixed;
+    left: 300px;
     display: none;
     cursor: pointer;
     
@@ -474,7 +476,7 @@ footer {
     }
 
     .nav-list {
-        position: absolute;
+        position: fixed;
         top: 8vh;
         right: 0px;
         width: 50vw;
@@ -489,6 +491,7 @@ footer {
         box-shadow: 0 -1px 4px rgba(0, 0, 0, .15);
         border-radius: 1.5rem 0 0 1.5rem;
         transform: translateX(100%); /* Faz transbordar */
+        z-index: var(--z-fixed);
     }
 
     .nav-list li {
@@ -512,6 +515,8 @@ footer {
             opacity: 1;
         }
     }
+
+
 
     /* ===== Home ===== */
 
