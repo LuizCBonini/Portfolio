@@ -11,6 +11,7 @@
     --first-second-color: hsl(var(--hue-color), 69%, 61%);
     --first-color-alt: hsl(var(--hue-color), 57%, 53%);
     --first-color-laghter: hsl(var(--hue-color), 92%, 85%);
+    --first-color-more-laghter: hsl(var(--hue-color), 92%, 95%);
     --title-color: hsl(var(--hue-color), 8%, 15%);
     --text-color: hsl(var(--hue-color), 8%, 45%);
     --text-color-light: hsl(var(--hue-color), 8%, 65%);
@@ -97,12 +98,6 @@ nav {
     font-family: Arial, Helvetica, sans-serif;
     height: 8vh;
 }
-
-/*main {
-    background: url("../../imgs/bg2.jpg") no-repeat center center;
-    background-size: cover;
-    height: 92vh;
-}*/
 
 .nav-list {
     list-style: none;
@@ -192,6 +187,7 @@ header {
 .emphasis {
     color: var(--first-color);
 }
+
 .home__blob {
     width: 300px;
     fill: var(--first-color);
@@ -261,6 +257,10 @@ header {
     margin: auto;
 }
 
+.about__data h2 {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.226);
+}
+
 /* ------------------------------- PROJECTS SECTION ------------------ */
 .section_projects-title span::before {
     content: "";
@@ -289,7 +289,7 @@ header {
     justify-content: center;
     align-items: center;
     position: relative;
-    width: 1100px;
+    width: 400px;
     padding: 30px;
 }
 
@@ -350,7 +350,38 @@ header {
     transition-delay: 0.3s;
 }
 
-/* ------------------------------- PROJECTS SECTION ------------------ */
+/* ------------------------------- SKILLS SECTION ------------------ */
+.section_skill-title span::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 124px;
+    width: 50px;
+    height: 1px;
+    background: #333;
+}
+
+.section_skill-title span {
+    padding-bottom: 20px;
+    display: block;
+    font-size: 10px;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 80px;
+    letter-spacing: 1px;
+    padding-top: 120px;
+}
+
+.skillsGrid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (minmax(80px, 1fr))[auto-fill];
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    grid-column-gap: 50px;
+    grid-row-gap: 50px;
+}
+
+/* ------------------------------- CONTACT SECTION ------------------ */
 .section_contact-title span::before {
     content: "";
     position: absolute;
@@ -371,8 +402,41 @@ header {
     letter-spacing: 1px;
     padding-top: 120px;
 }
+
+.contact__content {
+    max-width: 40rem;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.11);
+    padding: 50px;
+    border-radius: 10px;
+    font-size: var(--normal-font-size);
+    font-weight: var(--font-semi-bold);
+    margin: auto;
+}
+
+.contact__content h1 {
+    color: var(--first-color);
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.226);
+}
+
+/*----------------------- FOOTER -----------------------*/
+footer {
+    background: var(--first-color-laghter);
+    color: white;
+    margin: 2rem 0 0 -6rem;
+    padding: 5px;
+    text-align: center;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.199);
+    width: 100vw;
+}
+
+.Contact__social-icon {
+    font-size: 2.25rem;
+    color: var(--first-color);
+}
+
 /*----------------------- MOBILE -----------------------*/
 @media (max-width: 999px) {
+
     /* ========== Nav Bar ============= */
     body {
         overflow-x: hidden; /* Se algo transbordar, fica escondido */
@@ -421,13 +485,6 @@ header {
     }
 
     /* ===== Home ===== */
-    .about__data {
-        box-shadow: none;
-        font-size: var(--small-font-size);
-        font-weight: var(--font-semi-bold);
-        padding: 0;
-        margin: 0;
-    }
 
     .home__blob {
         width: 230px;
@@ -436,6 +493,15 @@ header {
 
     .home__description {
         font-size: var(--small-font-size);
+    }
+
+    /* ========= About ========== */
+    .about__data {
+        box-shadow: none;
+        font-size: var(--small-font-size);
+        font-weight: var(--font-semi-bold);
+        padding: 0;
+        margin: 0;
     }
 
     /* ======== PROJECTS ======== */
@@ -507,6 +573,28 @@ header {
         opacity: 1;
         margin-top: -40px;
         transition-delay: 0.3s;
+    }
+
+    /* ===== CONTACT ===== */
+    .Contact__social {
+        box-shadow: none;
+        font-size: var(--small-font-size);
+        font-weight: var(--font-semi-bold);
+        padding: 0;
+        margin: 0;
+    }
+
+    .contact__content {
+        box-shadow: none;
+        font-size: var(--small-font-size);
+        font-weight: var(--font-semi-bold);
+        margin: 0;
+        padding: 0;
+    }
+    
+    .contact__content h1 {
+        color: var(--first-color);
+        text-shadow: 0 0 10px rgba(0, 0, 0, 0.226);
     }
 }
 
