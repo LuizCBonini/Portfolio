@@ -285,9 +285,13 @@ header {
     padding-top: 120px;
 }
 
+.projects__container {
+    display: inline;
+}
+
 /* ---------- CARDS ----------- */
 .container-card {
-    display: flex;
+    display: inline-block;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -298,7 +302,7 @@ header {
 .container-card .card {
     position: relative;
     max-width: 300px;
-    height: 215px;
+    height: 200px;
     background: var(--first-color);
     margin: 30px 10px;
     padding: 20px 15px;
@@ -345,12 +349,34 @@ header {
     text-shadow: 0 0 5px rgba(0, 0, 0, 0.336);
 }
 
+.container-card .card .content .button {
+    background: var(--first-color-alt);
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.233);
+}
+
+.container-card .card .content .button:hover {
+    color: #ccc;
+}
+
 .container-card .card:hover .content {
     visibility: visible;
     opacity: 1;
-    margin-top: -40px;
+    margin-top: -90px;
     transition-delay: 0.3s;
 }
+
+.container-card .card .button--card {
+    text-align: center;
+    color: white;
+    font-weight: var(--font-medium);
+}
+
+.container-card .card:hover .button--card {
+    visibility: hidden;
+}
+
+
+
 
 /* ------------------------------- SKILLS SECTION ------------------ */
 .section_skill-title span::before {
@@ -553,7 +579,7 @@ footer {
         position: relative;
         max-width: 300px;
         width: 200px;
-        height: 160px;
+        height: 130px;
         background: var(--first-color);
         margin: 30px 10px;
         padding: 20px 15px;
@@ -605,7 +631,7 @@ footer {
     .container-card .card:hover .content {
         visibility: visible;
         opacity: 1;
-        margin-top: -40px;
+        margin-top: -60px;
         transition-delay: 0.3s;
     }
 
