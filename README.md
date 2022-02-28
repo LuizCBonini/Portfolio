@@ -1,4 +1,3 @@
-![Logo of the project](https://github.com/LuizCBonini/Portfolio/blob/main/public/readme_images/logo.png?raw=true)
 
 # Como usar:
 ### 1. Ao entrar logo aparece o home e o header, com links para as demais partes do portfólio e logo de cara, os meus contatos.
