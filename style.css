@@ -110,10 +110,13 @@ nav {
 }
 
 .mobile-menu {
-    position: fixed;
-    left: 300px;
     display: none;
     cursor: pointer;
+
+    position: fixed;
+    top: .7rem;
+    right: 1rem;
+    z-index: 6;
     
 }
 
@@ -325,7 +328,6 @@ header {
     top: -60px;
     left: 20px;
     z-index: 1;
-    /*box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);*/
 }
 
 .container-card .card .imgbox img {
@@ -362,17 +364,20 @@ header {
     visibility: visible;
     opacity: 1;
     margin-top: -90px;
-    transition-delay: 0.3s;
+    transition-delay: 0.4s;
 }
 
 .container-card .card .button--card {
     text-align: center;
     color: white;
     font-weight: var(--font-medium);
+    opacity: 1;
+    transition: 0.4s;
 }
 
 .container-card .card:hover .button--card {
-    visibility: hidden;
+    opacity: 0;
+
 }
 
 
@@ -530,7 +535,7 @@ footer {
     }
 
     .nav-list.active {
-        transform: translateX(0)
+        transform: translateX(0);
     }
 
     @keyframes navLinkFade {
@@ -602,7 +607,6 @@ footer {
         top: -60px;
         left: 0px;
         z-index: 1;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
     }
     
     .container-card .card .imgbox img {
